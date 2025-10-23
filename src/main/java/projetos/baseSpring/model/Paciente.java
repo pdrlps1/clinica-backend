@@ -2,11 +2,14 @@ package projetos.baseSpring.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "paciente", uniqueConstraints = {
         @UniqueConstraint(name = "uk_paciente_email", columnNames = "email")
